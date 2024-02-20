@@ -1,16 +1,13 @@
-package com.example.androidexample;
+package com.example.aquariumMain;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.DownloadManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.Volley;
+import com.example.androidexample.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -44,12 +41,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         int id = v.getId();
+        Intent i = new Intent(MainActivity.this, TankActivity.class);
         if (id == R.id.imageButton1 || id == R.id.imageButton2 || id == R.id.imageButton3 || id == R.id.imageButton4 || id == R.id.imageButton5 || id == R.id.imageButton5 || id == R.id.imageButton7) {
             /* Start Tank Activity*/
-            startActivity(new Intent(MainActivity.this, StringReqActivity.class));
+            i.putExtra("TankID", id);
+            startActivity(i);
         } else if (id == R.id.customerLineImageButton) {
             /*Start Customer Activity*/
-            startActivity(new Intent(MainActivity.this, JsonObjReqActivity.class));
+            //startActivity(new Intent(MainActivity.this, JsonObjReqActivity.class));
         }
     }
 }

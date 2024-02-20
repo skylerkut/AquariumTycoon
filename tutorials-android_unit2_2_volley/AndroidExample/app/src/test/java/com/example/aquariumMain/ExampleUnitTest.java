@@ -1,4 +1,4 @@
-package com.example.androidexample;
+package com.example.aquariumMain;
 
 import org.junit.Test;
 
