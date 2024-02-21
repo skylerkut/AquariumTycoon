@@ -9,43 +9,48 @@ import android.widget.ImageButton;
 
 import com.example.androidexample.R;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageButton tank1, tank2, tank3, tank4, tank5, tank6, tank7, customerLine ;
+    private ImageButton tank1Button, tank2Button, tank3Button, tank4Button, tank5Button, tank6Button, tank7Button, customerLineButton ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tank1 = findViewById(R.id.imageButton1);
-        tank2 = findViewById(R.id.imageButton2);
-        tank3 = findViewById(R.id.imageButton3);
-        tank4 = findViewById(R.id.imageButton4);
-        tank5 = findViewById(R.id.imageButton5);
-        tank6 = findViewById(R.id.imageButton6);
-        tank7 = findViewById(R.id.imageButton7);
-        customerLine = findViewById(R.id.customerLineImageButton);
+        AquariumInventory Inventory = AquariumInventory.getInstance();
+
+        tank1Button = findViewById(R.id.imageButton1);
+        tank2Button = findViewById(R.id.imageButton2);
+        tank3Button = findViewById(R.id.imageButton3);
+        tank4Button = findViewById(R.id.imageButton4);
+        tank5Button = findViewById(R.id.imageButton5);
+        tank6Button = findViewById(R.id.imageButton6);
+        tank7Button = findViewById(R.id.imageButton7);
+        customerLineButton = findViewById(R.id.customerLineImageButton);
 
         /* button click listeners */
-        tank1.setOnClickListener(this);
-        tank2.setOnClickListener(this);
-        tank3.setOnClickListener(this);
-        tank4.setOnClickListener(this);
-        tank5.setOnClickListener(this);
-        tank6.setOnClickListener(this);
-        tank7.setOnClickListener(this);
-        customerLine.setOnClickListener(this);
+        tank1Button.setOnClickListener(this);
+        tank2Button.setOnClickListener(this);
+        tank3Button.setOnClickListener(this);
+        tank4Button.setOnClickListener(this);
+        tank5Button.setOnClickListener(this);
+        tank6Button.setOnClickListener(this);
+        tank7Button.setOnClickListener(this);
+        customerLineButton.setOnClickListener(this);
+
     }
 
     @Override
     public void onClick(View v) {
         int id = v.getId();
-        Intent i = new Intent(MainActivity.this, TankActivity.class);
+        Intent intent = new Intent(MainActivity.this, TankActivity.class);
+        intent.putExtra("TankID", id);
         if (id == R.id.imageButton1 || id == R.id.imageButton2 || id == R.id.imageButton3 || id == R.id.imageButton4 || id == R.id.imageButton5 || id == R.id.imageButton5 || id == R.id.imageButton7) {
             /* Start Tank Activity*/
-            i.putExtra("TankID", id);
-            startActivity(i);
+            startActivity(intent);
         } else if (id == R.id.customerLineImageButton) {
             /*Start Customer Activity*/
             //startActivity(new Intent(MainActivity.this, JsonObjReqActivity.class));
