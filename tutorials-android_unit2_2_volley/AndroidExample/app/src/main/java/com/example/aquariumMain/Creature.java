@@ -5,13 +5,27 @@ import java.sql.Array;
 public class Creature {
 
     int hunger;
+
+    public Creature(int hunger, int size, int happiness, String loves, String hates, String eats, String name, int image, boolean isLocked, String type) {
+        this.hunger = hunger;
+        this.size = size;
+        this.happiness = happiness;
+        this.loves = loves;
+        this.hates = hates;
+        this.eats = eats;
+        this.name = name;
+        this.image = image;
+        this.isLocked = isLocked;
+        this.type = type;
+    }
+
     int size;
     int happiness;
-    String loves[] = new String[5];
-    String hates[] = new String[5];
-    String eats[] = new String[5];
-    String produces[] = new String[5];
+    String loves;
+    String hates;
+    String eats;
     String name;
     int image;
     boolean isLocked = true;
+    String type;
 }
