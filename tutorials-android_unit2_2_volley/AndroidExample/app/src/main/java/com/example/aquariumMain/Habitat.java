@@ -1,2 +1,4 @@
-package com.example.aquariumMain;public class Habitat {
+package com.example.aquariumMain;
+
+public class Habitat {
 }

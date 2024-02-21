@@ -3,6 +3,7 @@ package com.example.aquariumMain;
 import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -22,17 +23,12 @@ public class TankActivity extends AppCompatActivity implements View.OnClickListe
         //Get this tank
         Bundle bundle = getIntent().getExtras();
         int extras = bundle.getInt("TankID");
-
-        //v.getID to tank id
-        if(extras == 2131230939){
-            extras = 1;
-            tankImage.setImageResource(R.mipmap.fishtankleft_foreground);
-        }
+        Log.i("TankID", "TankID: " + extras);
 
         //Load this tank from inventory
         AquariumInventory Inventory = AquariumInventory.getInstance();
-        Tank thisTank = Inventory.tankInv.get(extras);
-
+        Tank thisTank = Inventory.tankInv.get(extras-1);
+        tankImage.setImageResource(thisTank.getBackgroundImage());
     }
 
     @Override

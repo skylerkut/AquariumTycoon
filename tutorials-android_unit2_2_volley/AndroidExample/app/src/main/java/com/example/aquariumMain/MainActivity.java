@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.example.androidexample.R;
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ImageButton tank1Button, tank2Button, tank3Button, tank4Button, tank5Button, tank6Button, tank7Button, customerLineButton ;
-
+private Button map,home,book;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,19 +42,63 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tank7Button.setOnClickListener(this);
         customerLineButton.setOnClickListener(this);
 
+        /*Bar Buttons*/
+        map = findViewById(R.id.MapButton);
+        map.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(MainActivity.this, TankActivity.class);
+                    startActivity(intent);
+            }});
+        home = findViewById(R.id.HomeButton);
+        home.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(MainActivity.this, TankActivity.class);
+                startActivity(intent);
+            }});
+        book = findViewById(R.id.BookButton);
+        book.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(MainActivity.this, TankActivity.class);
+                startActivity(intent);
+            }});
+
     }
 
     @Override
     public void onClick(View v) {
         int id = v.getId();
         Intent intent = new Intent(MainActivity.this, TankActivity.class);
-        intent.putExtra("TankID", id);
-        if (id == R.id.imageButton1 || id == R.id.imageButton2 || id == R.id.imageButton3 || id == R.id.imageButton4 || id == R.id.imageButton5 || id == R.id.imageButton5 || id == R.id.imageButton7) {
-            /* Start Tank Activity*/
+        if (id == R.id.imageButton1){
+            intent.putExtra("TankID", 1);
             startActivity(intent);
         } else if (id == R.id.customerLineImageButton) {
-            /*Start Customer Activity*/
-            //startActivity(new Intent(MainActivity.this, JsonObjReqActivity.class));
+
+        }else if (id == R.id.imageButton2) {
+            intent.putExtra("TankID", 2);
+            startActivity(intent);
+        }
+        else if (id == R.id.imageButton3) {
+            intent.putExtra("TankID", 3);
+            startActivity(intent);
+        }
+        else if (id == R.id.imageButton4) {
+            intent.putExtra("TankID", 4);
+            startActivity(intent);
+        }
+        else if (id == R.id.imageButton5) {
+            intent.putExtra("TankID", 5);
+            startActivity(intent);
+        }
+        else if (id == R.id.imageButton6) {
+            intent.putExtra("TankID", 6);
+            startActivity(intent);
+        }
+        else if (id == R.id.imageButton7) {
+            intent.putExtra("TankID", 7);
+            startActivity(intent);
         }
     }
 }

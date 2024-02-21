@@ -1,7 +1,7 @@
 package com.example.aquariumMain;
 
 public class Tank {
-    public Tank(int creatures, int habitat, int happiness, int income, String tankName, String backgroundImage) {
+    public Tank(int creatures, int habitat, int happiness, int income, String tankName, int backgroundImage) {
         this.creatures = creatures;
         Habitat = habitat;
         Happiness = happiness;
@@ -15,7 +15,7 @@ public class Tank {
     public int Happiness;
     public int income;
     public String tankName;
-    String backgroundImage;
+    int backgroundImage;
 
     public String getTankName() {
         return tankName;
@@ -25,11 +25,11 @@ public class Tank {
         this.tankName = tankName;
     }
 
-    public String getBackgroundImage() {
+    public int getBackgroundImage() {
         return backgroundImage;
     }
 
-    public void setBackgroundImage(String backgroundImage) {
+    public void setBackgroundImage(int backgroundImage) {
         this.backgroundImage = backgroundImage;
     }
 

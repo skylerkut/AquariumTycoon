@@ -18,9 +18,11 @@
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="384dp"
-        android:layout_height="119dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="372dp"
+        android:layout_height="331dp"
+        android:backgroundTint="@color/cardview_dark_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="415dp" />
+        app:layout_constraintTop_toBottomOf="@+id/tankImage" />
 </androidx.constraintlayout.widget.ConstraintLayout>
