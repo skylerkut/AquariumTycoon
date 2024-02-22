@@ -20,7 +20,7 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
     }
     @Override
     public void onClick(View v){
-        Intent intent = new Intent(MainActivity.this, TankActivity.class);
+        Intent intent = new Intent(MapActivity.this, TankActivity.class);
         startActivity(intent);
     }
 }

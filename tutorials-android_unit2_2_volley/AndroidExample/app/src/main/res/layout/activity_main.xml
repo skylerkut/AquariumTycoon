@@ -1,88 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    tools:context="com.example.aquariumMain.MainActivity"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.aquariumMain.MainActivity"
+    android:background="@drawable/backgroundPlan">
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="211dp"
-        android:layout_height="116dp"
+        android:layout_width="249dp"
+        android:layout_height="101dp"
+        android:contentDescription="tank 2"
+        android:src="@mipmap/fishtankright_foreground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintHorizontal_bias="0.92"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011"
-        android:src="@mipmap/fishtankright_foreground" />
+        app:layout_constraintVertical_bias="0.026" />
 
     <ImageButton
         android:id="@+id/imageButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="tank 3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.706"
+        app:layout_constraintHorizontal_bias="0.902"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.27"
+        app:layout_constraintVertical_bias="0.258"
         app:srcCompat="@android:drawable/alert_dark_frame" />
 
     <ImageButton
         android:id="@+id/imageButton4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="tank 4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.267"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.332"
+        app:layout_constraintVertical_bias="0.217"
         app:srcCompat="@android:drawable/alert_dark_frame" />
 
     <ImageButton
         android:id="@+id/imageButton5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="76dp"
+        android:layout_height="119dp"
+        android:contentDescription="tank 5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.484"
-        app:srcCompat="@android:drawable/alert_dark_frame" />
+        app:layout_constraintVertical_bias="0.33"
+        app:srcCompat="@drawable/midtank" />
 
     <ImageButton
         android:id="@+id/imageButton6"
         android:layout_width="212dp"
         android:layout_height="102dp"
+        android:contentDescription="tank 6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintHorizontal_bias="0.748"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.542"
+        app:layout_constraintVertical_bias="0.554"
         app:srcCompat="@android:drawable/alert_dark_frame" />
 
     <ImageButton
         android:id="@+id/imageButton7"
         android:layout_width="211dp"
         android:layout_height="97dp"
+        android:contentDescription="tank 7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintHorizontal_bias="0.71"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.76"
+        app:layout_constraintVertical_bias="0.815"
         app:srcCompat="@android:drawable/alert_dark_frame" />
 
     <ImageButton
         android:id="@+id/customerLineImageButton"
-        android:layout_width="121dp"
-        android:layout_height="221dp"
+        android:layout_width="65dp"
+        android:layout_height="312dp"
+        android:contentDescription="your customers"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -93,16 +101,17 @@
 
     <ImageButton
         android:id="@+id/imageButton1"
-        android:layout_width="162dp"
-        android:layout_height="156dp"
+        android:layout_width="107dp"
+        android:layout_height="74dp"
         android:layout_marginStart="16dp"
-        android:src="@mipmap/fishtankleft_foreground"
+        android:contentDescription="tank1"
+        android:src="@drawable/fhishtank2222"
         app:layout_constraintBottom_toTopOf="@+id/imageButton4"
         app:layout_constraintEnd_toStartOf="@+id/imageButton2"
-        app:layout_constraintHorizontal_bias="0.279"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.559" />
+        app:layout_constraintVertical_bias="0.466" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="408dp"

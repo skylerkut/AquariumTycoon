@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageButton tank1Button, tank2Button, tank3Button, tank4Button, tank5Button, tank6Button, tank7Button, customerLineButton ;
+    private ImageButton tank1Button, tank2Button, tank3Button, tank4Button, tank5Button, tank6Button, tank7Button, customerLineButton;
 private Button map,home,book;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

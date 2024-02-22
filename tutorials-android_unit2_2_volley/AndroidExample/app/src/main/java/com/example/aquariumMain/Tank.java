@@ -1,21 +1,75 @@
 package com.example.aquariumMain;
 
+import java.util.ArrayList;
+
 public class Tank {
-    public Tank(int creatures, int habitat, int happiness, int income, String tankName, int backgroundImage) {
+
+    public Tank(ArrayList<Creature> creatures, boolean saltWater, double happiness, int income, String tankName, int backgroundImage, double temp, double size) {
         this.creatures = creatures;
-        Habitat = habitat;
-        Happiness = happiness;
+        this.saltWater = saltWater;
+        this.happiness = happiness;
         this.income = income;
         this.tankName = tankName;
         this.backgroundImage = backgroundImage;
+        this.temp = temp;
+        this.size = size;
     }
-
-    public int creatures;
-    public int Habitat;
-    public int Happiness;
+    ArrayList<Creature> creatures;
+    public boolean saltWater = false;
+    public double happiness;
     public int income;
     public String tankName;
     int backgroundImage;
+    public double temp;
+    public double size;
+
+    public ArrayList<Creature> getCreatures() {
+        return creatures;
+    }
+
+    public void setCreatures(ArrayList<Creature> creatures) {
+        this.creatures = creatures;
+    }
+
+    public boolean isSaltWater() {
+        return saltWater;
+    }
+
+    public void setSaltWater(boolean saltWater) {
+        this.saltWater = saltWater;
+    }
+
+    public double getHappiness() {
+        return happiness;
+    }
+
+    public void setHappiness(double happiness) {
+        this.happiness = happiness;
+    }
+
+    public int getIncome() {
+        return income;
+    }
+
+    public void setIncome(int income) {
+        this.income = income;
+    }
+
+    public double getTemp() {
+        return temp;
+    }
+
+    public void setTemp(double temp) {
+        this.temp = temp;
+    }
+
+    public double getSize() {
+        return size;
+    }
+
+    public void setSize(double size) {
+        this.size = size;
+    }
 
     public String getTankName() {
         return tankName;
