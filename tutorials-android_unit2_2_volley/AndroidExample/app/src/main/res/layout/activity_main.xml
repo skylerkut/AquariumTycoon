@@ -105,7 +105,6 @@
         android:layout_height="74dp"
         android:layout_marginStart="16dp"
         android:contentDescription="tank1"
-        android:src="@drawable/fhishtank2222"
         app:layout_constraintBottom_toTopOf="@+id/imageButton4"
         app:layout_constraintEnd_toStartOf="@+id/imageButton2"
         app:layout_constraintHorizontal_bias="0.0"

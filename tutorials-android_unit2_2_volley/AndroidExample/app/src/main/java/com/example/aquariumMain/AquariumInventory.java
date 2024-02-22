@@ -12,19 +12,11 @@ public class AquariumInventory {
     private static AquariumInventory single_instance = null;
     private AquariumInventory(){
 
-        ArrayList<Creature> testCreatures = new ArrayList<Creature>();
-        Fish fish1 = new Fish(2, 50, null, "fish1", 0, false, 30, "coral reef");
-        Fish fish2 = new Fish(10, 30, null, "fish2", 0, false, 80, "coral reef");
-        Fish fish3 = new Fish(5, 70, null, "fish3", 0, false, 50, "coral reef");
-        Plant plant1 = new Plant(1, 70, null, "plant1", 0, false, "coral reef");
-        Plant plant2 = new Plant(4, 40, null, "plant2", 0, false, "coral reef");
-        Plant plant3 = new Plant(2, 80, null, "plant3", 0, false, "coral reef");
-        testCreatures.add(fish1);
-        testCreatures.add(fish2);
-        testCreatures.add(fish3);
-        testCreatures.add(plant1);
-        testCreatures.add(plant2);
-        testCreatures.add(plant3);
+        ArrayList<Creature> allCreatures = new ArrayList<Creature>();
+        //Coral Fish
+        allCreatures.add(new DoctorfishTang(27,"doctorfish1"));
+        allCreatures.add(new Clownfish(10,"clownfish1"));
+        allCreatures.add(new Parrotfish(30,"parrotfish1"));
 
         Log.i("Creatures", "AquariumInventory: " + testCreatures);
         /*Initialize Tanks*/
