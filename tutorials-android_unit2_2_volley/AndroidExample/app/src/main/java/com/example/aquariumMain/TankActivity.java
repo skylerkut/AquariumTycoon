@@ -66,7 +66,7 @@ public class TankActivity extends AppCompatActivity implements View.OnClickListe
 
         for (Creature c: tankCreatures) {
             creatures += c.getName() + "--\t";
-           happinessAvg += c.getHappiness();
+          // happinessAvg += c.getHappiness();
         }
         creatureDisplay.setText("Creatures: " + creatures);
 

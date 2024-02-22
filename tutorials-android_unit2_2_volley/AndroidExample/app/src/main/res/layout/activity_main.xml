@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.aquariumMain.MainActivity"
-    android:background="@drawable/backgroundPlan">
+    android:background="@drawable/backgroundplan">
 
     <ImageButton
         android:id="@+id/imageButton2"
