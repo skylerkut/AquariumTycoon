@@ -15,6 +15,12 @@
         android:theme="@style/Theme.AquariumTycoon"
         tools:targetApi="31">
         <activity
+            android:name="com.example.aquariumMain.FishShopActivity"
+            android:exported="true"/>
+        <activity
+            android:name="com.example.aquariumMain.MapActivity"
+            android:exported="true"/>
+        <activity
             android:name="com.example.aquariumMain.TankActivity"
             android:exported="true"/>
         <activity
